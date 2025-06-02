@@ -1,0 +1,447 @@
+/* Importar fuentes personalizadas */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --primary: #7b1fa2; /* Púrpura sofisticado */
+  --primary-light: #ede7f6; /* Lila claro */
+  --accent: #ff7043; /* Coral vibrante */
+  --accent-light: #ffe0b2; /* Naranja claro */
+  --background: #f9f6fc; /* Fondo lila muy claro */
+  --card-bg: #fff7fa; /* Blanco rosado para tarjetas */
+  --text: #311b36; /* Púrpura oscuro para texto */
+  --input-bg: #f3e5f5;
+  --input-border: #ce93d8; /* Lila para bordes */
+  --error: #d84315; /* Rojo terracota */
+  --shadow: 0 8px 32px rgba(123,31,162,0.10);
+}
+[data-theme="dark"] {
+  --primary: #ff7043;
+  --primary-light: #311b36;
+  --accent: #ffe0b2;
+  --accent-light: #7b1fa2;
+  --background: #2a1930;
+  --card-bg: #311b36;
+  --text: #ffe0b2;
+  --input-bg: #311b36;
+  --input-border: #ff7043;
+  --error: #ff7043;
+  --shadow: 0 8px 32px rgba(255,112,67,0.10);
+}
+
+/* Global styles for a clean, professional look */
+body {
+  font-family: 'Inter', 'Hanken Grotesk', 'Segoe UI', Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+.app-container, .main-anim {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: var(--card-bg);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 2rem 2.5rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+h1, h2 {
+  color: var(--primary);
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+h1.shiny-text {
+  color: transparent;
+  background: linear-gradient(90deg, var(--accent), var(--primary), var(--accent-light));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+button, .save-btn, .add-btn, .remove-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(255,179,0,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+button:hover, .save-btn:hover, .add-btn:hover, .remove-btn:hover {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(109,76,65,0.12);
+}
+
+input, select, textarea {
+  background: var(--input-bg);
+  border: 1.5px solid var(--input-border);
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.form-section {
+  background: var(--primary-light);
+  border-radius: 12px;
+  padding: 1.5rem 1.2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(109,76,65,0.04);
+}
+
+h1, h2 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.form-section {
+  margin-bottom: 2rem;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.form-section input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: var(--input-bg);
+  border: 1.5px solid var(--input-border);
+  color: var(--text);
+  font-size: 1.05rem;
+  border-radius: 7px;
+  transition: border 0.2s, background 0.3s, color 0.3s;
+}
+.form-section input:focus {
+  border: 1.5px solid var(--primary);
+  outline: none;
+}
+
+.item-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.item-row input {
+  flex: 1;
+}
+
+.add-btn, .remove-btn {
+  background: #e3eafc;
+  border: none;
+  color: #2a3b4c;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  margin-left: 0.5rem;
+  background: linear-gradient(90deg, var(--primary) 60%, var(--accent) 100%);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px var(--shadow);
+  border: none;
+  transition: background 0.2s;
+}
+.add-btn:hover {
+  background: linear-gradient(90deg, var(--accent) 60%, var(--primary) 100%);
+}
+
+.remove-btn {
+  background: #ffe3e3;
+  color: #b71c1c;
+}
+
+.remove-btn:hover {
+  background: #ffbdbd;
+}
+
+.invoice-preview {
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  transition: background 0.3s, color 0.3s;
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.items-table th, .items-table td {
+  border: 1px solid var(--input-border);
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+  background: transparent;
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.totals {
+  text-align: right;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.main-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-bottom: 2.5rem; /* Separación extra antes del historial */
+}
+
+.save-btn, .download-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.save-btn:hover {
+  background: var(--accent);
+}
+
+.download-btn {
+  background: var(--accent);
+}
+
+.download-btn:hover {
+  background: var(--primary);
+}
+
+/* Login styles */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, var(--primary) 0%, var(--accent) 100%);
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+
+/* Fondo animado tipo waves para el login */
+.login-waves-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 320px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.login-card {
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  min-width: 340px;
+  z-index: 2;
+  position: relative;
+  animation: fadeInCard 1.2s cubic-bezier(.77,0,.18,1);
+}
+@keyframes fadeInCard {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.login-title {
+  text-align: center;
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.login-form label {
+  color: var(--primary);
+  font-weight: 600;
+}
+.login-form input {
+  border: 1.5px solid var(--input-border);
+  background: var(--input-bg);
+  color: var(--text);
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  border-radius: 7px;
+  transition: border 0.2s, background 0.3s, color 0.3s;
+}
+.login-form input:focus {
+  border: 1.5px solid var(--primary);
+  outline: none;
+}
+.login-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.login-error {
+  color: var(--error);
+  background: #ffeaea;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+.login-bg-anim {
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--accent) 0%, var(--primary) 100%);
+  opacity: 0.18;
+  filter: blur(40px);
+  z-index: 1;
+  animation: bgMove 8s infinite alternate ease-in-out;
+}
+@keyframes bgMove {
+  0% { transform: scale(1) translate(0,0); }
+  100% { transform: scale(1.2) translate(60px, 40px); }
+}
+
+.main-anim {
+  background: linear-gradient(120deg, var(--background) 60%, var(--primary-light) 100%);
+  box-shadow: var(--shadow);
+  border-radius: 18px;
+}
+
+/* Historial de facturas */
+.form-section ul {
+  list-style: none;
+  padding: 0;
+}
+.form-section li {
+  background: #f7f8fa;
+  border: 1px solid #e0e4ea;
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #2a3b4c;
+  transition: background 0.2s;
+}
+.form-section li:hover {
+  background: #e3eafc;
+}
+
+.form-section input[type="text"] {
+  margin-bottom: 1rem;
+}
+
+/* Shiny text animation */
+.shiny-text {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 40%, #43cea2 80%);
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine-move 2.5s linear infinite;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+@keyframes shine-move {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 700px) {
+  .app-container, .main-anim {
+    max-width: 100vw;
+    padding: 1rem 0.5rem;
+    border-radius: 0;
+  }
+  .login-card {
+    min-width: unset;
+    width: 95vw;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .invoice-preview {
+    padding: 1rem 0.5rem;
+  }
+  .items-table th, .items-table td {
+    font-size: 0.95rem;
+    padding: 0.3rem 0.3rem;
+  }
+  .main-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  .form-section label {
+    font-size: 0.98rem;
+  }
+  .login-title {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 430px) {
+  .login-card, .app-container, .main-anim {
+    padding: 0.5rem 0.1rem;
+  }
+  .invoice-preview {
+    padding: 0.5rem 0.1rem;
+  }
+  .items-table th, .items-table td {
+    font-size: 0.85rem;
+    padding: 0.2rem 0.1rem;
+  }
+}
+
+html, body {
+  overflow-x: hidden !important;
+  width: 100vw;
+  position: relative;
+}
