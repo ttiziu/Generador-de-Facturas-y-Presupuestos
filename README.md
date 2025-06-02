@@ -1,5 +1,7 @@
 # Generador de Facturas y Presupuestos
 
+[¡Probar la aplicación online!](https://generador-de-facturas-y-presupuesto.vercel.app)
+
 Generador de Facturas y Presupuestos es una aplicación web moderna desarrollada en React que permite crear, visualizar, descargar y gestionar facturas o presupuestos de manera sencilla y profesional. Está pensada para pequeñas empresas, emprendedores y profesionales que necesitan una solución ágil y visualmente atractiva para la gestión de sus documentos comerciales.
 
 ## Características principales
@@ -15,6 +17,20 @@ Generador de Facturas y Presupuestos es una aplicación web moderna desarrollada
 - **Persistencia en la nube** (Firebase Firestore)
 - **Validaciones inteligentes** y autocompletado de datos por RUC/DNI (APIs públicas)
 
+## Capturas de pantalla
+
+### Login
+
+![Login](src/assets/Captura%20de%20pantalla%202025-06-02%20182957.png)
+
+### Página principal
+
+![Página principal](src/assets/Captura%20de%20pantalla%202025-06-02%20183434.png)
+
+### Ejemplo de factura
+
+![Ejemplo de factura](src/assets/Captura%20de%20pantalla%202025-06-02%20183515.png)
+
 ## Tecnologías y herramientas utilizadas
 
 - **React**: Librería principal para la construcción de la interfaz de usuario.
@@ -25,31 +41,6 @@ Generador de Facturas y Presupuestos es una aplicación web moderna desarrollada
 - **Vite**: Herramienta de desarrollo y build para proyectos React.
 - **APIs públicas**: Consulta de datos de clientes por RUC/DNI.
 - **CSS moderno**: Estilos globales, variables CSS, modo oscuro/claro y diseño responsive.
-
-## Instalación y uso
-
-1. **Clona el repositorio:**
-   ```bash
-   git clone <url-del-repo>
-   cd generador-de-facturas-o-presupuestos
-   ```
-2. **Instala las dependencias:**
-   ```bash
-   npm install
-   ```
-3. **Configura Firebase:**
-   - (Solo para el dueño del proyecto) Crea un proyecto en [Firebase](https://firebase.google.com/), habilita Authentication (Email/Password) y Firestore Database, y copia tu configuración en `src/firebase.js`.
-   - **Nota:** Si solo vas a usar la aplicación, puedes registrarte y acceder directamente desde la página web pública, sin necesidad de configurar nada.
-4. **Inicia la aplicación:**
-   ```bash
-   npm run dev
-   ```
-5. **Accede desde tu navegador:**
-   - La app estará disponible en `http://localhost:5173` (o el puerto que indique Vite).
-
-## Capturas de pantalla
-
-> Agrega aquí capturas de la pantalla de login, página principal y ejemplo de factura.
 
 ## Créditos y agradecimientos
 
