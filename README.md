@@ -41,6 +41,7 @@ Generador de Facturas y Presupuestos es una aplicación web moderna desarrollada
    - Crea un proyecto en [Firebase](https://firebase.google.com/).
    - Habilita Authentication (Email/Password) y Firestore Database.
    - Copia tu configuración en `src/firebase.js`.
+   - **Nota:** Los usuarios pueden crear sus cuentas directamente desde la página web usando el botón "Registrarse" en el formulario de acceso.
 4. **Inicia la aplicación:**
    ```bash
    npm run dev
