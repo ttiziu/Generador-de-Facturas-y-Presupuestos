@@ -34,12 +34,12 @@ Generador de Facturas y Presupuestos es una aplicación web moderna desarrollada
 ## Tecnologías y herramientas utilizadas
 
 - **React**: Librería principal para la construcción de la interfaz de usuario.
-- **Firebase**: Autenticación y base de datos en la nube (Firestore).
+- **Firebase**: Autenticación de usuarios y base de datos en la nube (Firestore).
 - **GSAP**: Animaciones de entrada y transiciones.
 - **reactbits.dev/Waves**: Fondo animado interactivo tipo "waves" para una experiencia visual moderna.
 - **jsPDF**: Generación de archivos PDF desde el navegador.
 - **Vite**: Herramienta de desarrollo y build para proyectos React.
-- **APIs públicas**: Consulta de datos de clientes por RUC/DNI.
+- **APIs públicas**: Consulta de datos de clientes por RUC/DNI ([apis.net.pe](https://apis.net.pe/)).
 - **CSS moderno**: Estilos globales, variables CSS, modo oscuro/claro y diseño responsive.
 
 ## Créditos y agradecimientos
